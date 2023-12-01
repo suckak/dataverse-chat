@@ -2,6 +2,7 @@
   "name": "dataverse-chat",
   "version": "1.0.0",
   "main": "src/index.html",
+  "type": "module",
   "license": "MIT",
   "scripts": {
     "htmlhint": "htmlhint src/*.html test/*.html",
