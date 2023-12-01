@@ -9,7 +9,7 @@ const Home = () => {
   const button = document.createElement("button");
   button.innerHTML = "Go!";
   button.addEventListener("click", () => {
-    navigateTo("/detail", { test: "text" });
+    navigateTo("/detail?otra=cosa", { test: "text" });
   });
 
   container.append(title, button);

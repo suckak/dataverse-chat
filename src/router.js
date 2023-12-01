@@ -26,10 +26,13 @@ const renderView = (pathname, props) => {
 };
 
 export const navigateTo = (pathname, props) => {
-  console.log(props);
+  console.log(props, pathname);
+  let params = { ...props };
+  if (pathname.split("?")[1]) {
+    params = { ...params, ...queryStringToObject(pathname.split("?")[1]) };
+  }
   window.history.pushState(props, "", pathname);
-
-  renderView(pathname, props);
+  renderView(pathname.split("?")[0], params);
 };
 
 export const onURLChange = (location, props = {}) => {
